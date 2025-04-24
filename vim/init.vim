@@ -18,25 +18,35 @@ set nrformats-=octal
 language message en
 
 
-"Status line
-set cmdheight=2
-set laststatus=2
-set statusline=%<%f\ %m\ %r%h%w%y%{'['.(&fenc!=''?&fenc:&enc).']['.&ff.']'}%=\ (%v,%l)/%L%8P\ 
-set display+=lastline
-
-
 " search config
 set smartcase
 set ignorecase
 set hlsearch
 
+"Status line
+" plain vim only
+if !has('nvim')
+  set cmdheight=2
+  set laststatus=2
+  set statusline=%<%f\ %m\ %r%h%w%y%{'['.(&fenc!=''?&fenc:&enc).']['.&ff.']'}%=\ (%v,%l)/%L%8P\ 
+  set display+=lastline
+end
+
+
+
 
 " Plugins
-source $HOME/dotfiles/vim/plugins.vim
+" plain vim only
+if !has('nvim')
+  source $HOME/dotfiles/vim/plugins.vim
+end
 
 
 " Colorscheme & highlight
-source $HOME/dotfiles/vim/color.vim
+" plain vim only
+if !has('nvim')
+  source $HOME/dotfiles/vim/color.vim
+end
 
 
 " Filetype setting
@@ -52,7 +62,10 @@ source $HOME/dotfiles/vim/windows.vim
 
 
 " gVim
-source $HOME/dotfiles/vim/gvim.vim
+" plain vim only
+if !has('nvim')
+  source $HOME/dotfiles/vim/gvim.vim
+end
 
 
 " Vim Training
