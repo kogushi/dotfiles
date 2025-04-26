@@ -21,21 +21,29 @@ vim.o.smartcase = true
 vim.o.ignorecase = true
 vim.o.hlsearch = true
 
--- Status config 
+-- Status/Command line config 
 vim.opt.laststatus = 3
+vim.opt.cmdheight = 2
+
+
+-- Move to home directory
+vim.cmd([[
+  autocmd VimEnter * silent! execute 'cd ~'
+]])
 
 
 -- Package Manager
 require("package_manager.lazy")
 
 -- Plugin configurations
+require("plugin_configs.neo-tree")
 require("plugin_configs.telescope")
 
 
 -- Each configuration
--- require("gui-init")
 require("windows")
 require("yank")
+
 
 
 
