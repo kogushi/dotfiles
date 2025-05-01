@@ -31,6 +31,12 @@ vim.cmd([[
   autocmd VimEnter * silent! execute 'cd ~'
 ]])
 
+-- neovide configurations
+if vim.g.neovide then
+  require("gui-init")
+end
+
+
 
 -- Package Manager
 require("package_manager.lazy")
@@ -41,8 +47,8 @@ require("plugin_configs.telescope")
 
 
 -- Each configuration
-require("windows")
-require("yank")
+require("configs.windows")
+require("configs.yank")
 
 
 
