@@ -1,11 +1,16 @@
 return {
   {
-    "EdenEast/nightfox.nvim"
-  },
-  {
-    "folke/tokyonight.nvim",
+    "EdenEast/nightfox.nvim",
     lazy = false,
     priority = 1000,
-    opts = {},
-  }
+	config = function()
+		require('configs.color')
+	end,
+  },
+--  {
+--    "folke/tokyonight.nvim",
+--    lazy = false,
+--    priority = 1000,
+--    opts = {},
+--  }
 }

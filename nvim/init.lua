@@ -47,9 +47,3 @@ require ("configs.keymappings")
 require ("configs.yank")
 require ("configs.windows")
 require ("configs.terminal")
-
-
--- Choosing colorscheme
-vim.cmd[[ colorscheme nightfox ]]
---vim.cmd[[ colorscheme tokyonight-moon ]]
-
