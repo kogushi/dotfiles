@@ -41,16 +41,11 @@ end
 -- Package Manager
 require("package_manager.lazy")
 
--- Plugin configurations
-require("plugin_configs.neo-tree")
-require("plugin_configs.telescope")
-
-
+--
 -- Each configuration
-require("configs.windows")
-require("configs.yank")
-
-
+require ("configs.keymappings")
+require ("configs.yank")
+require ("configs.windows")
 
 
 -- Choosing colorscheme

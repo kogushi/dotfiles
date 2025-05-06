@@ -1,4 +1,4 @@
--- Common Keymappings
+-- Common (global) Keymappings
 
 -- Using space as <Leader> <LocalLeader>
 vim.g.mapleader = " "

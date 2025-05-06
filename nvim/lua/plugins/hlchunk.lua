@@ -6,14 +6,14 @@ return {
 	  require("hlchunk").setup({
         indent = {
           chars = {
-              "│",
               "¦",
               "┆",
               "┊",
+              "┊",
           },
           style = {
-              "#7F0000",
-              "#FF007F",
+              "#FF0000",
+              "#7F007F",
               "#7F7F00",
               "#007F00",
               "#007F7F",
