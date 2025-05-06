@@ -41,11 +41,12 @@ end
 -- Package Manager
 require("package_manager.lazy")
 
---
+
 -- Each configuration
 require ("configs.keymappings")
 require ("configs.yank")
 require ("configs.windows")
+require ("configs.terminal")
 
 
 -- Choosing colorscheme
