@@ -6,7 +6,7 @@ return {
       globalstatus = true,
     },
 	config = function()
-		require('lualine').setup()
+		require('lualine').setup(options)
 	end
   }
 }
