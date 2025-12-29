@@ -1,2 +1,7 @@
--- GuiFont! MyricaM\ M:h8
-vim.o.guifont="MyricaM M:h12"
+-- GuiFonts for each environment
+local env = require('my_util.detect_environment').detect()
+
+if env.is_windows then
+	vim.o.guifont="MyricaM M:h12"
+end
+
