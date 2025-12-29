@@ -37,13 +37,10 @@ vim.api.nvim_create_autocmd("BufWritePre", {
   command = [[%s/\s\+$//e]],
 })
 
-
-
 -- neovide configurations
 if vim.g.neovide then
   require("gui-init")
 end
-
 
 
 -- Package Manager
@@ -55,3 +52,4 @@ require ("configs.keymappings")
 require ("configs.yank")
 require ("configs.japanese")
 require ("configs.terminal")
+require ("configs.filetypes")
