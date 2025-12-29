@@ -3,7 +3,7 @@
 --
 
 -- PowerShell in Windows
-local env = require('my_util.detect_environment').detect()
+local env = require('my.detect_environment').detect()
 
 if env.is_windows then
 	vim.opt.shell = 'powershell'
@@ -13,11 +13,11 @@ if env.is_windows then
 end
 
 
--- 
+--
 -- Terminal Configurations
 --
 
--- Terminal at the bottom 
+-- Terminal at the bottom
 vim.keymap.set('n', 'bt', '<cmd>belowright new<CR><cmd>terminal<CR>', { noremap = true, silent = true })
 
 -- Insert mode when terminal launches

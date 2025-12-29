@@ -12,7 +12,7 @@ vim.opt.ambiwidth = 'double'
 --
 
 -- IME is off when changing mode
-local env = require('my_util.detect_environment').detect()
+local env = require('my.detect_environment').detect()
 
 if env.is_linux then
   vim.api.nvim_set_keymap("i", "<silent> <Esc>", "<Esc>:call system('fcitx5-remote -c')<CR>", { noremap = true })
