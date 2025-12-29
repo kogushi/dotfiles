@@ -2,11 +2,15 @@
 -- Default shell
 --
 
--- Set PowerShell as the default shell
-vim.opt.shell = 'powershell'
-vim.opt.shellcmdflag = '-command'
-vim.opt.shellquote = '"'
-vim.opt.shellxquote = ''
+-- PowerShell in Windows
+local env = require('my_util.detect_environment').detect()
+
+if env.is_windows then
+	vim.opt.shell = 'powershell'
+	vim.opt.shellcmdflag = '-command'
+	vim.opt.shellquote = '"'
+	vim.opt.shellxquote = ''
+end
 
 
 -- 
