@@ -9,3 +9,10 @@ vim.api.nvim_create_autocmd('FileType', {
   callback = function(args) my_filetype[args.match]() end
 })
 
+
+-- Force to treat myhelp.txt as help.
+vim.filetype.add({
+  pattern = {
+    [os.getenv("XDG_CONFIG_HOME") .. '/nvim/doc/.*%.txt'] = 'help',
+  },
+})

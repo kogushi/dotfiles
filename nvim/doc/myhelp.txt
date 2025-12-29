@@ -1,0 +1,11 @@
+*myhelp.txt*    My help file for NeoVim
+
+INTRODUCTION                                         *myhelp-intro*
+My help file to use NeoVim.
+
+COMMANDS                                             *myhelp-commands*
+- :MyToolStart      Start tools
+- :MyToolStop       Stop tools
+
+TIPS                                                 *myhelp-tips*
+- <leader>h -> Shortcut for showing helper.

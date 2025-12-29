@@ -30,7 +30,7 @@ end
 return setmetatable(M, {
   __index = function()
     return function()
-      print('Unexpected filetype!')
+      print('Unknown filetype. Use default.')
       set_indent(4, false)
     end
   end
