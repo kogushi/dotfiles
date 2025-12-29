@@ -384,7 +384,7 @@ return {
 
 	  -- Keymapping in normal mode
       -- vim.keymap.set("n", "<leader>e", "<Cmd>Neotree reveal<CR>")
-      vim.keymap.set('n', '<Leader>e', ':Neotree filesystem reveal left<CR>')
+      vim.keymap.set('n', '<Leader>e', ':Neotree filesystem toggle right<CR>')
     end,
   },
 }

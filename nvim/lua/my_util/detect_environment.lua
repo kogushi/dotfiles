@@ -1,8 +1,9 @@
 -- Function to detect environment
 local M = {}
+local _env	-- cached value
 
--- Function as API
-function M.detect()
+-- Function
+local function detect_environment()
   local env = {}
 
   -- Linux
@@ -20,4 +21,13 @@ function M.detect()
   return env
 end
 
+-- Function as API
+function M.detect()
+  if not _env then
+    _env = detect_environment()
+  end
+  return _env
+end
+
+-- Exposed as a module
 return M
