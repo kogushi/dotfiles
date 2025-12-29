@@ -4,7 +4,8 @@ return {
     lazy = false,
     priority = 1000,
 	config = function()
-		require('configs.color')
+		vim.cmd[[ colorscheme nightfox ]]
+	--	require('configs.color')
 	end,
   },
 --  {
