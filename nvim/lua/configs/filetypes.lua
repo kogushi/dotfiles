@@ -1,5 +1,7 @@
 -- Handler to add each filetype configuration.
 -- Configuration for each filetype are stored in my/filetypes.lua
+--
+-- Refer to https://zenn.dev/rapan931/articles/45b09b774512fc
 local my_filetype = require('my.filetypes')
 
 vim.api.nvim_create_augroup('vimrc_augroup', {})
