@@ -6,10 +6,10 @@ return {
 
 	config = function()
       -- Apply the colorscheme
-      vim.cmd[[ colorscheme nightfox ]]
+      vim.cmd[[ colorscheme duskfox ]]
 
 	  -- Color of window separator
-      local _palette = require("nightfox.palette").load("nightfox")
+      local _palette = require("nightfox.palette").load("duskfox")
       vim.api.nvim_set_hl(0, "WinSeparator", {
         fg = _palette.fg1,
         bg = _palette.bg1,
