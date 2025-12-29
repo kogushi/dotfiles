@@ -21,15 +21,23 @@ vim.o.smartcase = true
 vim.o.ignorecase = true
 vim.o.hlsearch = true
 
--- Status/Command line config 
-vim.opt.laststatus = 3
-vim.opt.cmdheight = 2
+-- Status/Command line config
+vim.opt.laststatus = 3	-- Global Status line in neovim
+vim.opt.cmdheight = 3
 
 
 -- Move to home directory
 vim.cmd([[
   autocmd VimEnter * silent! execute 'cd ~'
 ]])
+
+-- Remove space at EOL
+vim.api.nvim_create_autocmd("BufWritePre", {
+  pattern = { "*.lua", "*.vim", "*.yaml" },
+  command = [[%s/\s\+$//e]],
+})
+
+
 
 -- neovide configurations
 if vim.g.neovide then
