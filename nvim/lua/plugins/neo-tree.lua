@@ -39,7 +39,9 @@ return {
         end,
       },
     },
-    lazy = false,
+    event = 'VeryLazy',
+    -- lazy = false,
+	
     -----Instead of using `config`, you can use `opts` instead, if you'd like:
     -----@module "neo-tree"
     -----@type neotree.Config

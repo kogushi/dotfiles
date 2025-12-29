@@ -5,6 +5,7 @@ return {
     options = {
       globalstatus = true,
     },
+	event = 'VeryLazy',
 	config = function()
 		require('lualine').setup(options)
 	end
