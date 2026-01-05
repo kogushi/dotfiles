@@ -22,7 +22,7 @@ nnoremap <ESC><ESC> :nohl<CR>
 nmap <Space>m <Plug>(quickhl-manual-this)
 xmap <Space>m <Plug>(quickhl-manual-this)
 nmap <Space>M <Plug>(quickhl-manual-reset)
-nmap <Space>M <Plug>(quickhl-manual-reset)
+xmap <Space>M <Plug>(quickhl-manual-reset)
 
 "Fern
 nnoremap <silent> <Leader>e :<C-u>Fern .<CR>
