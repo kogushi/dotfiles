@@ -4,8 +4,11 @@ INTRODUCTION                                         *myhelp-intro*
 My help file to use NeoVim.
 
 COMMANDS                                             *myhelp-commands*
-- :MyToolStart      Start tools
-- :MyToolStop       Stop tools
+- :helptags <path>  Update tags for help.
 
 TIPS                                                 *myhelp-tips*
-- <leader>h -> Shortcut for showing helper.
+- <leader>h         Shortcut for showing helper.
+
+quickhl-vim
+- <leader>m         Hightlight a word.
+- <leader>M         Reset hightlight.
