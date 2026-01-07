@@ -1,7 +1,8 @@
 return {
   {
     'okkiroxx/rtx.vim',
-    event = 'VeryLazy',
-	ft = 'rtx',
+    --event = 'VeryLazy',
+    lazy = true,
+  	ft = 'rtx',
   },
 }

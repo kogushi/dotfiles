@@ -9,6 +9,10 @@ COMMANDS                                             *myhelp-commands*
 TIPS                                                 *myhelp-tips*
 - <leader>h         Shortcut for showing helper.
 
+Terminal
+- <c-\><c-n>        Into Terminal-Normal mode.
+- i                 Return to terminal (insert mode).
+
 quickhl-vim
 - <leader>m         Hightlight a word.
 - <leader>M         Reset hightlight.
