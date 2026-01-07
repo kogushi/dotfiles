@@ -22,3 +22,7 @@ vim.keymap.set('n', '<leader>m', '<Plug>(quickhl-manual-this)', { silent = true 
 vim.keymap.set('x', '<leader>m', '<Plug>(quickhl-manual-this)', { silent = true })
 vim.keymap.set('n', '<leader>M', '<Plug>(quickhl-manual-reset)', { silent = true })
 vim.keymap.set('x', '<leader>M', '<Plug>(quickhl-manual-reset)', { silent = true })
+
+-- Buffer move
+vim.keymap.set('n', '<leader>p', ':bp<CR>', { noremap = true, silent = true })
+vim.keymap.set('n', '<leader>n', ':bn<CR>', { noremap = true, silent = true })
