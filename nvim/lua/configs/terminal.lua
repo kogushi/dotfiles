@@ -18,7 +18,7 @@ end
 --
 
 -- Terminal at the bottom
-vim.keymap.set('n', 'bt', '<cmd>belowright new<CR><cmd>terminal<CR>', { noremap = true, silent = true })
+vim.keymap.set('n', '<Leader>t', '<cmd>belowright 12split new<CR><cmd>terminal<CR>', { noremap = true, silent = true })
 
 -- Insert mode when terminal launches
 local group_terminal = vim.api.nvim_create_augroup('terminal', { clear = true })
@@ -35,3 +35,6 @@ vim.api.nvim_create_autocmd({ 'TermOpen' }, {
 
 -- <esc><esc> => Terminal-normal mode
 vim.api.nvim_set_keymap('t', '<ESC><ESC>', '<C-\\><C-N>', { noremap = true, silent = true })
+
+-- Move window focus to next window
+vim.api.nvim_set_keymap('t', '<C-W><C-W>', '<cmd>wincmd w<cr>', { noremap = true, silent = true })
