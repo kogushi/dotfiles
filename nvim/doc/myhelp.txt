@@ -6,10 +6,11 @@ My help file to use NeoVim.
 COMMANDS                                             *myhelp-commands*
 - :helptags <path>  Update tags for help.
 
-TIPS                                                 *myhelp-tips*
+KEY MAPPINGS                                         *myhelp-keymappings*
 - <leader>h         Shortcut for showing helper.
 
 Terminal
+- <Leader>t         Open Terminal
 - <c-\><c-n>        Into Terminal-Normal mode.
 - i                 Return to terminal (insert mode).
 
