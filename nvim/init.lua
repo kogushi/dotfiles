@@ -46,6 +46,8 @@ end
 -- Package Manager
 require("package_manager.lazy")
 
+-- Initialize LSP
+require("lsp")
 
 -- Each configuration
 require ("configs.keymappings")
