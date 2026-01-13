@@ -15,29 +15,31 @@ vim.diagnostic.config({
   virtual_text = true
 })
 
--- augroup for this config file
-local augroup = vim.api.nvim_create_augroup('lsp/init.lua', {})
-
-vim.api.nvim_create_autocmd('LspAttach', {
-  group = augroup,
-  callback = function(args)
-    local client = assert(vim.lsp.get_client_by_id(args.data.client_id))
-
-    vim.keymap.set('n', 'grd', function()
-      vim.lsp.buf.definition()
-    end, { buffer = args.buf, desc = 'vim.lsp.buf.definition()' })
-
-    vim.keymap.set('n', '<space>i', function()
-      vim.lsp.buf.format({ bufnr = args.buf, id = client.id })
-    end, { buffer = args.buf, desc = 'Format buffer' })
-  end,
-})
-
+-- Marker of the workspace
 vim.lsp.config('*', {
   root_markers = { '.git' },
 })
 
--- load lsp/lua_ls.lua
-local lua_ls_opts = require('lsp.lua_ls')
-vim.lsp.config('lua_ls', lua_ls_opts)
-vim.lsp.enable('lua_ls')
+
+-- load lsp modules
+local dirname = vim.fn.stdpath('config') .. '/lua/lsp'
+local lsp_names = {}
+
+for file, ftype in vim.fs.dir(dirname) do
+  -- Gather lua files except init.lua
+  if ftype == 'file' and vim.endswith(file, '.lua') and file ~= 'init.lua' then
+    local lsp_name = file:sub(0, -5) -- fname without '.lua'
+    -- load the lua file
+    local ok, result = pcall(require, 'lsp.' .. lsp_name)
+    if ok then
+      vim.lsp.config(lsp_name, result)
+      table.insert(lsp_names, lsp_name)
+    else
+      -- Fail to load
+      vim.notify('Error loading LSP: ' .. lsp_name .. '\n' .. result, vim.log.levels.WARN)
+    end
+  end
+end
+
+-- Enable loaded lua files
+vim.lsp.enable(lsp_names)
