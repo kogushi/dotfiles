@@ -23,10 +23,6 @@ vim.keymap.set('x', '<leader>m', '<Plug>(quickhl-manual-this)', { silent = true 
 vim.keymap.set('n', '<leader>M', '<Plug>(quickhl-manual-reset)', { silent = true })
 vim.keymap.set('x', '<leader>M', '<Plug>(quickhl-manual-reset)', { silent = true })
 
--- Buffer move
-vim.keymap.set('n', '<leader>]b', ':bp<CR>', { noremap = true, silent = true })
-vim.keymap.set('n', '<leader>[b', ':bn<CR>', { noremap = true, silent = true })
-
 -- Quickfix
 vim.keymap.set('n', '<leader>qo', '<cmd>copen<cr>', { desc = 'Open quickfix' })
 vim.keymap.set('n', ']q', '<cmd>cnext<cr>', { desc = 'Next quickfix item' })
@@ -34,10 +30,11 @@ vim.keymap.set('n', '[q', '<cmd>cprev<cr>', { desc = 'Previous quickfix item' })
 vim.keymap.set('n', '<leader>qc', '<cmd>cclose<cr>', { desc = 'Close quickfix' })
 
 -- LSP
-vim.keymap.set('n', '<Leader>ze', vim.diagnostic.open_float)
-vim.keymap.set('n', '[d', vim.diagnostic.goto_prev)
-vim.keymap.set('n', ']d', vim.diagnostic.goto_next)
-vim.keymap.set('n', '<Leader>zq', vim.diagnostic.setloclist)
+vim.keymap.set('n', '<Leader>do', vim.diagnostic.open_float)
+vim.keymap.set('n', ']d', vim.diagnostic.get_next, { desc = 'Next diagnostic item' })
+vim.keymap.set('n', '[d', vim.diagnostic.get_prev, { desc = 'Previous diagnostic item' })
+vim.keymap.set('n', '<Leader>dc', vim.diagnostic.hide)
+vim.keymap.set('n', '<Leader>dl', vim.diagnostic.setloclist)
 
 -- Use LspAttach autocommand to only map the following keys after LSP is attached
 vim.api.nvim_create_autocmd('LspAttach', {
