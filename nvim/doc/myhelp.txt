@@ -25,6 +25,6 @@ Quick-fix
 - [q                Previous quickfix item.
 
 Buffer move
-- <Leader>]b                Next buffer.
-- <Leader>[b                Previous buffer.
+- ]b                Next buffer.
+- [b                Previous buffer.
 
