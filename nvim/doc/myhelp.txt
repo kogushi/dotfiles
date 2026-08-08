@@ -17,3 +17,14 @@ Terminal
 quickhl-vim
 - <leader>m         Hightlight a word.
 - <leader>M         Reset hightlight.
+
+Quick-fix
+- <leader>qo        Open quickfix.
+- <leader>qc        Close quickfix.
+- ]q                Next quickfix item.
+- [q                Previous quickfix item.
+
+Buffer move
+- <Leader>]b                Next buffer.
+- <Leader>[b                Previous buffer.
+
