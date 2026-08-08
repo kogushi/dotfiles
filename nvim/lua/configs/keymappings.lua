@@ -24,9 +24,14 @@ vim.keymap.set('n', '<leader>M', '<Plug>(quickhl-manual-reset)', { silent = true
 vim.keymap.set('x', '<leader>M', '<Plug>(quickhl-manual-reset)', { silent = true })
 
 -- Buffer move
-vim.keymap.set('n', '<leader>b', ':bp<CR>', { noremap = true, silent = true })
-vim.keymap.set('n', '<leader>n', ':bn<CR>', { noremap = true, silent = true })
+vim.keymap.set('n', '<leader>]b', ':bp<CR>', { noremap = true, silent = true })
+vim.keymap.set('n', '<leader>[b', ':bn<CR>', { noremap = true, silent = true })
 
+-- Quickfix
+vim.keymap.set('n', '<leader>qo', '<cmd>copen<cr>', { desc = 'Open quickfix' })
+vim.keymap.set('n', ']q', '<cmd>cnext<cr>', { desc = 'Next quickfix item' })
+vim.keymap.set('n', '[q', '<cmd>cprev<cr>', { desc = 'Previous quickfix item' })
+vim.keymap.set('n', '<leader>qc', '<cmd>cclose<cr>', { desc = 'Close quickfix' })
 
 -- LSP
 vim.keymap.set('n', '<Leader>ze', vim.diagnostic.open_float)
