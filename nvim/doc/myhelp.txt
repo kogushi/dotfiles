@@ -9,11 +9,6 @@ COMMANDS                                             *myhelp-commands*
 KEY MAPPINGS                                         *myhelp-keymappings*
 - <leader>h         Shortcut for showing helper.
 
-Terminal
-- <Leader>t         Open Terminal
-- <c-\><c-n>        Into Terminal-Normal mode.
-- i                 Return to terminal (insert mode).
-
 quickhl-vim
 - <leader>m         Hightlight a word.
 - <leader>M         Reset hightlight.
@@ -24,7 +19,18 @@ Quick-fix
 - ]q                Next quickfix item.
 - [q                Previous quickfix item.
 
-Buffer move
-- ]b                Next buffer.
-- [b                Previous buffer.
+Buffer
+- ]b                Next buffer in the buffer list.
+- [b                Previous buffer in the buffer list.
+- <C-^>             Edit the alternate file (mostly the previously edited file).
+- ls                Show all buffers
+                        %	the buffer in the current window
+		                #	the alternate buffer for ":e #" and CTRL-^
+		                a	an active buffer: it is loaded and visible
+		                h	a hidden buffer: It is loaded, but currently not displayed in a window |hidden-buffer|
+
+Terminal
+- <Leader>t         Open Terminal
+- <c-\><c-n>        Into Terminal-Normal mode.
+- i                 Return to terminal (insert mode).
 
